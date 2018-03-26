@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <!--配置控制台的输出-->
+    <!--配置项需要这个ConsoleAppender类去处理-->
+    <appender name="consolelog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                <!--%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n-->
+                %d - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <!--配置文件 -->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/base.log</File>
+        <!--根据范围过滤-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <!--onMatch 禁止-->
+            <onMatch>DENY</onMatch>
+            <!--neutral 中立 忽略本配置，进行下一项的过滤-->
+            <!--onMisMattch 接受-->
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+       <encoder>
+           <pattern>
+               %msg%n
+           </pattern>
+       </encoder>
+        <!--滚动的策略  时间-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            　<fileNamePattern>log/base.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!--配置文件 -->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/Error.log</File>
+        <!--根据范围过滤-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>
+                ERROR
+            </level>
+        </filter>
+        <encoder>
+            <pattern>
+                %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动的策略  时间-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            　<fileNamePattern>log/Error.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!--使用在哪里-->
+    <root level="info">
+        <appender-ref ref="consolelog" />
+        <appender-ref ref="fileInfoLog" />
+        <appender-ref ref="fileErrorLog" />
+    </root>
+</configuration>

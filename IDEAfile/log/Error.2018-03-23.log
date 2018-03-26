@@ -1,0 +1,31 @@
+Duplicate entry '10' for key 'uqe_category_type'
+findoneProductInfo{productId='123456', productName='皮蛋粥', productPrice=3.50, productStock=10, productDescription='营养，健康，美味', productIcon='‪C:\Users\欣\Pictures\b.jpg', productStatus=0, categoryType=2}
+errorfindoneProductInfo{productId='123456', productName='皮蛋粥', productPrice=3.50, productStock=10, productDescription='营养，健康，美味', productIcon='‪C:\Users\欣\Pictures\b.jpg', productStatus=0, categoryType=2}
+Starting ProductInfoServiceImplTest on DESKTOP-NSGJ498 with PID 1208 (started by 欣 in D:\IDEAfile)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@48bb62: startup date [Fri Mar 23 16:43:29 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.4.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$52c79570] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@48bb62: startup date [Fri Mar 23 16:43:29 CST 2018]; root of context hierarchy
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started ProductInfoServiceImplTest in 6.176 seconds (JVM running for 7.474)
+errorfindoneProductInfo{productId='123456', productName='皮蛋粥', productPrice=3.50, productStock=10, productDescription='营养，健康，美味', productIcon='‪C:\Users\欣\Pictures\b.jpg', productStatus=0, categoryType=2}
+Closing org.springframework.web.context.support.GenericWebApplicationContext@48bb62: startup date [Fri Mar 23 16:43:29 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+findUpAllProductInfo{productId='123456', productName='皮蛋粥', productPrice=3.50, productStock=10, productDescription='营养，健康，美味', productIcon='‪C:\Users\欣\Pictures\b.jpg', productStatus=0, categoryType=2}
+findUpAllProductInfo{productId='123000', productName='玉米粥', productPrice=2.50, productStock=6, productDescription='营养，健康，美味', productIcon='‪C:\Users\欣\Pictures\b.jpg', productStatus=0, categoryType=2}
+findUpAllProductInfo{productId='123456', productName='皮蛋粥', productPrice=3.50, productStock=10, productDescription='营养，健康，美味', productIcon='‪C:\Users\欣\Pictures\b.jpg', productStatus=0, categoryType=2}
